@@ -123,4 +123,18 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'debug_blacklist' => [
+        '_ENV' => [
+            'MPESA_CONSUMER_KEY',
+            'MPESA_CONSUME_SECRET',
+            'MPESA_SHORTCODE',
+            'MPESA_STK_SHORTCODE',
+            'MPESA_ENV',
+            'MPESSA_TEST_MSISDN',
+            'MPESA_TEST_URL',
+            'MPESA_PASSKEY',
+            'MPESA_B2C_PASSWORD'
+        ]
+    ],
+
 ];
