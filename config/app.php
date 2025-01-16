@@ -127,13 +127,12 @@ return [
         '_ENV' => [
             'MPESA_CONSUMER_KEY',
             'MPESA_CONSUME_SECRET',
-            'MPESA_SHORTCODE',
-            'MPESA_STK_SHORTCODE',
-            'MPESA_ENV',
-            'MPESSA_TEST_MSISDN',
-            'MPESA_TEST_URL',
-            'MPESA_PASSKEY',
-            'MPESA_B2C_PASSWORD'
+            'SAFARICOM_PASSKEY',
+            'MPESA_BUSINESS_SHORTCODE',
+            'MPESA_INITIATOR_NAME',
+            'MPESA_INITIATOR_PASSWORD',
+            'MPESA_B2C_SHORTCODE',
+            'MPESA_CALLBACK_URL',
         ]
     ],
 
