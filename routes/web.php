@@ -9,8 +9,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/v1/mpesa/stk/query/test', [MpesaSTKPushController::class,'getQuery']);
-Route::post('/v1/mpesa/stk/query', [MpesaSTKPushController::class,'query']);
-Route::get('/v1/mpesa/stk', [MpesaSTKPushController::class,'getStkPush']);
-Route::post('/v1/mpesa/stk/push', [MpesaSTKPushController::class, 'STKPush']);
+Route::get('/v1/payments/stk/query/test', [MpesaSTKPushController::class,'getQuery']);
+Route::post('/v1/payments/stk/query', [MpesaSTKPushController::class,'query']);
+Route::get('/v1/payments/stk', [MpesaSTKPushController::class,'getStkPush']);
+Route::post('/v1/payments/stk/push', [MpesaSTKPushController::class, 'STKPush']);
 

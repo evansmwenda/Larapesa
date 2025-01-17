@@ -53,7 +53,7 @@
                         <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                             <h2 class="text-2xl font-bold mb-8 text-center">STK Push Payment</h2>
                             
-                            <form action="/v1/mpesa/stk/query" method="POST" class="space-y-6">
+                            <form action="/v1/payments/stk/query" method="POST" class="space-y-6">
                                 @csrf
                                 
                                 <div class="space-y-2">

@@ -11,7 +11,7 @@ class STKPush
 {
     public $failed = false;
     public $response = 'An Unkown Error Occured';
-
+ 
     public function confirm(Request $request)
     {
         $payload = json_decode($request->getContent());
@@ -23,11 +23,11 @@ class STKPush
             $result_code = $payload->Body->stkCallback->ResultCode;
             $amount = $payload->Body->stkCallback->CallbackMetadata->Item[0]->Value;
             $mpesa_receipt_number = $payload->Body->stkCallback->CallbackMetadata->Item[1]->Value;
-            $transaction_date = $payload->Body->stkCallback->CallbackMetadata->Item[3]->Value;
-            $phonenumber = $payload->Body->stkCallback->CallbackMetadata->Item[4]->Value;
+            $transaction_date = $payload->Body->stkCallback->CallbackMetadata->Item[2]->Value;
+            $phonenumber = $payload->Body->stkCallback->CallbackMetadata->Item[3]->Value;
 
             $stkPush = MpesaSTK::where('merchant_request_id', $merchant_request_id)
-                ->where('checkout_request_id', $checkout_request_id)->first();//fetch the trasaction based on the merchant and checkout ids
+                ->where('checkout_request_id', $checkout_request_id)->first();
 
             $data = [
                 'result_desc' => $result_desc,
