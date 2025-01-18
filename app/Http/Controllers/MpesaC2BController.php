@@ -11,7 +11,7 @@ class MpesaC2BController extends Controller
 {
     public function registerURLS(Request $request)
     {
-        $shortcode = $request->input('shortcode');
+        $shortcode = $request->input('shortcode');//600978
         $response = Mpesa::c2bregisterURLS($shortcode);
         
         /** @var \Illuminate\Http\Client\Response $response */

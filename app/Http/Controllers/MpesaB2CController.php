@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Iankumu\Mpesa\Facades\Mpesa;
 
 class MpesaB2CController extends Controller
 {
@@ -19,6 +20,6 @@ class MpesaB2CController extends Controller
         /** @var \Illuminate\Http\Client\Response $response */
         $result = $response->json(); 
 
-        return $result
+        return $result;
     }
 }
